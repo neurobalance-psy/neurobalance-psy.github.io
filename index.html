@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        html { scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; }
         .hero-gradient { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); }
     </style>
@@ -15,10 +16,11 @@
 
 <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="text-xl font-600 tracking-tight text-blue-600">НЕЙРОБАЛАНС</div>
+        <div class="text-xl font-semibold tracking-tight text-blue-600">НЕЙРОБАЛАНС</div>
         <div class="hidden md:flex space-x-8 text-sm font-medium">
             <a href="#about" class="hover:text-blue-500 transition">О центре</a>
             <a href="#services" class="hover:text-blue-500 transition">Услуги</a>
+            <a href="#team" class="hover:text-blue-500 transition">Специалисты</a>
             <a href="#contact" class="hover:text-blue-500 transition">Контакты</a>
         </div>
         <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm hover:bg-blue-700 transition">Записаться</a>
@@ -30,27 +32,27 @@
         <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Восстановите внутреннее равновесие</h1>
         <p class="text-lg md:text-xl text-gray-600 mb-10">Профессиональная психологическая поддержка с использованием современных методик нейропсихологии и когнитивной терапии.</p>
         <div class="flex flex-col md:flex-row justify-center gap-4">
-            <button class="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition">Узнать больше</button>
-            <button class="bg-white border border-gray-200 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition">Наши специалисты</button>
+            <a href="#about" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition text-center">Узнать больше</a>
+            <a href="#team" class="bg-white border border-gray-200 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition text-center">Наши специалисты</a>
         </div>
     </div>
 </header>
 
 <section id="about" class="py-24 px-6">
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div class="bg-gray-200 aspect-video rounded-3xl overflow-hidden">
-            <div class="w-full h-full flex items-center justify-center text-gray-400">Фото центра</div>
+        <div class="bg-gray-200 aspect-video rounded-3xl overflow-hidden flex items-center justify-center text-gray-400">
+            Фото центра или процесса
         </div>
         <div>
             <h2 class="text-3xl font-bold mb-6">Почему выбирают Нейробаланс?</h2>
-            <p class="text-gray-600 mb-4">Мы верим в научный подход к ментальному здоровью. Наш центр объединяет классическую психотерапию и знания о работе мозга, чтобы помогать эффективно и бережно.</p>
+            <p class="text-gray-600 mb-4 text-lg">Мы верим в научный подход к ментальному здоровью. Наш центр объединяет классическую психотерапию и знания о работе мозга, чтобы помогать эффективно и бережно.</p>
             <ul class="space-y-4">
                 <li class="flex items-start">
-                    <span class="text-blue-500 mr-3">✓</span>
+                    <span class="text-blue-500 mr-3 font-bold">✓</span>
                     <span>Индивидуальные программы реабилитации</span>
                 </li>
                 <li class="flex items-start">
-                    <span class="text-blue-500 mr-3">✓</span>
+                    <span class="text-blue-500 mr-3 font-bold">✓</span>
                     <span>Конфиденциальность и этический кодекс</span>
                 </li>
             </ul>
@@ -81,18 +83,46 @@
     </div>
 </section>
 
+<section id="team" class="py-24 bg-gray-50 px-6">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-4">Наши специалисты</h2>
+        <p class="text-gray-500 text-center mb-16 max-w-2xl mx-auto">Команда экспертов, готовых поддержать вас на пути к гармонии.</p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-3xl shadow-sm text-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-6 flex items-center justify-center text-gray-400">Фото</div>
+                <h3 class="text-xl font-bold">Имя Специалиста</h3>
+                <p class="text-blue-600 text-sm mb-4">Ведущий психолог</p>
+                <p class="text-gray-500 text-sm">Специализация: КПТ, работа с депрессией, стаж 10 лет.</p>
+            </div>
+            <div class="bg-white p-6 rounded-3xl shadow-sm text-center border-2 border-blue-500/20">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-6 flex items-center justify-center text-gray-400">Фото</div>
+                <h3 class="text-xl font-bold">Имя Специалиста</h3>
+                <p class="text-blue-600 text-sm mb-4">Нейропсихолог</p>
+                <p class="text-gray-500 text-sm">Специализация: Когнитивные нарушения, работа с памятью.</p>
+            </div>
+            <div class="bg-white p-6 rounded-3xl shadow-sm text-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-6 flex items-center justify-center text-gray-400">Фото</div>
+                <h3 class="text-xl font-bold">Имя Специалиста</h3>
+                <p class="text-blue-600 text-sm mb-4">Семейный терапевт</p>
+                <p class="text-gray-500 text-sm">Специализация: Отношения, кризисные ситуации.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="contact" class="py-24 px-6 bg-gray-900 text-white">
     <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-8">Готовы начать?</h2>
+        <h2 class="text-3xl font-bold mb-8 uppercase tracking-wider">Готовы начать?</h2>
         <p class="text-gray-400 mb-12">Оставьте заявку, и наш администратор свяжется с вами для подбора специалиста.</p>
         <form class="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto">
             <input type="text" placeholder="Ваше имя" class="bg-gray-800 border-none rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none">
             <input type="tel" placeholder="Телефон" class="bg-gray-800 border-none rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none">
             <button class="md:col-span-2 bg-blue-600 p-4 rounded-xl font-semibold hover:bg-blue-700 transition">Отправить заявку</button>
         </form>
-        <div class="mt-16 pt-8 border-t border-gray-800 text-sm text-gray-500">
+        <div class="mt-16 pt-8 border-t border-gray-800 text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4">
             <p>г. Москва, ул. Примерная, д. 10 | +7 (000) 000-00-00</p>
-            <p class="mt-4">© 2026 Нейробаланс. Все права защищены.</p>
+            <p>© 2026 Нейробаланс. Все права защищены.</p>
         </div>
     </div>
 </section>
